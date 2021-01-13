@@ -27,3 +27,5 @@ the_str='12,33,44'
 add=the_str.split(',')
 cc=''.join(add)
 print(cc)
+
+2222
