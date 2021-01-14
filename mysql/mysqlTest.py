@@ -115,6 +115,7 @@ def deleteMySQL():
         conn.close()
 
 class MysqlHelper():
+
     def conn(self):
         con=pymysql.Connect(
             host='127.0.0.1',
@@ -122,7 +123,7 @@ class MysqlHelper():
             passwd='123456',
             db='five')
         return con
-
+    #创建游标和查询
     def selete_one(self, sql, params):
         cur=self.conn().cursor()
         data=cur.execute(sql,params)
@@ -134,8 +135,8 @@ def checkvaild(username,password):
     sql='select * from login where username=%s and password=%s'
     params=(username,password)
     result=opera.selete_one(sql=sql,params=params)
-    # if result:
-    #     print('登录成功')
+    if result:
+        print('登录成功')
 
-#     print(result)
-# print(checkvaild('panda','123456'))
+    print(result)
+print(checkvaild('panda','123456'))
