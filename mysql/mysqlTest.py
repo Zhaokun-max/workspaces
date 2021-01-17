@@ -134,9 +134,58 @@ def checkvaild(username,password):
     opera=MysqlHelper()
     sql='select * from login where username=%s and password=%s'
     params=(username,password)
-    result=opera.selete_one(sql=sql,params=params)
-    if result:
-        print('登录成功')
+    return opera.selete_one(sql=sql,params=params)
 
-    print(result)
-print(checkvaild('panda','123456'))
+def info():
+    username=input('请输入用户名：\n')
+    password=input('请输入密码：\n')
+    result=checkvaild(username,password)
+    if result:
+        print('登录成功，昵称：{0}'.format(username))
+    else:
+        print('登陆失败，请检查用户名和密码')
+if __name__ == '__main__':
+    info()
+
+#封装类
+'''
+class MysqlHelper():
+
+    def __init__(self,sql,params):
+        self.sql=sql
+        self.params=params
+
+    def conn(self):
+        con=pymysql.Connect(
+            host='127.0.0.1',
+            user='root',
+            passwd='123456',
+            db='five')
+        return con
+    #创建游标和查询
+    def selete_one(self, sql, params):
+
+        cur=self.conn().cursor()
+        data=cur.execute(sql,params)
+        result=cur.fetchone()
+        return result
+
+class my(object):
+
+    def __init__(self, sql, params):
+        self.sql = sql
+        self.params = params
+
+    def checkvaild(self,username,password):
+        opera=MysqlHelper('panda','123456')
+        sql="select * from login where username=%s and password=%s"
+        params=(username,password)
+        result=opera.selete_one(sql=sql,params=params)
+        if result:
+            print('登录成功')
+
+if __name__ == '__main__':
+
+    m=my('panda','123456')
+    m.checkvaild('panda','123456')
+'''
