@@ -18,7 +18,7 @@ def register():
     """
     username,password=inout()
     temp = username+'|'+password
-   # with open('login.txt','w') as f:
+   # with open('login.yaml.txt','w') as f:
         # f.write(temp)
     #反序列化
     json.dump(temp,open('user','w'))
@@ -26,7 +26,7 @@ def register():
 def login():
     "登录的函数"
     username,password=inout()
-    # with open("login.txt","r") as f:
+    # with open("login.yaml.txt","r") as f:
     #     info = f.read()
     # 序列化文件
     #扩展   for循环把str转换成列表，切割，根据下标进行判断
@@ -49,7 +49,7 @@ def login():
 
 def getnick(func):
     "获取昵称"
-    # with open("login","r") as f:
+    # with open("login.yaml","r") as f:
     #     info = f.read()
     # info = info.split('|')
     lsogn=json.load(open('user','r'))

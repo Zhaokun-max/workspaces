@@ -18,8 +18,8 @@ class F1(unittest.TestCase):
     def test_002(self):
         print('test')
     def test_003(self):
-        #self.assertEqual(1,'1')
-        asdasdad
+        print('test')
+
 
 if __name__ == '__main__':
 

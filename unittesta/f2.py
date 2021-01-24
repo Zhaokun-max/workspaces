@@ -8,7 +8,7 @@ from selenium import webdriver
 class F2(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.drive=webdriver.Firefox()
+        cls.drive=webdriver.Chrome  ()
         cls.drive.maximize_window()
         cls.drive.implicitly_wait(50)
         cls.drive.get('http://baidu.com')

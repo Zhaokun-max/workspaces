@@ -132,7 +132,7 @@ class MysqlHelper():
 
 def checkvaild(username,password):
     opera=MysqlHelper()
-    sql='select * from login where username=%s and password=%s'
+    sql='select * from login.yaml where username=%s and password=%s'
     params=(username,password)
     return opera.selete_one(sql=sql,params=params)
 
@@ -178,7 +178,7 @@ class my(object):
 
     def checkvaild(self,username,password):
         opera=MysqlHelper('panda','123456')
-        sql="select * from login where username=%s and password=%s"
+        sql="select * from login.yaml where username=%s and password=%s"
         params=(username,password)
         result=opera.selete_one(sql=sql,params=params)
         if result:

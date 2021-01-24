@@ -8,10 +8,10 @@ from selenium import webdriver
 class Baidutest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.drive=webdriver.Firefox()
+        cls.drive=webdriver.Chrome()
         cls.drive.maximize_window()
         cls.drive.implicitly_wait(50)
-        cls.drive.get('http://baidu.com')
+        cls.drive.get('http://www.baidu.com')
 
     @classmethod
     def tearDownClass(cls):
@@ -19,11 +19,11 @@ class Baidutest(unittest.TestCase):
 
     def test_baidu_news(self):
         self.drive.find_element_by_link_text('新闻').click()
-        self.drive.back()
+        self.drive.close()
 
     def test_baidu_map(self):
         self.drive.find_element_by_partial_link_text('图').click()
-        self.drive.back()
+        self.drive.close()
 
 
 if __name__ == '__main__':

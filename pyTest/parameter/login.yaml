@@ -1,6 +1,6 @@
 ---
 #用户名请求为空
-"url": "http://localhost:5000/login"
+"url": "http://localhost:5000/login.yaml"
 "body": '{
         	"password":"admin",
         	"sex":"男",
@@ -14,7 +14,7 @@
 
 ---
 #密码参数为空
-"url": "http://localhost:5000/login"
+"url": "http://localhost:5000/login.yaml"
 "body": '{
         	"username":"admin",
         	"sex":"男",
@@ -27,7 +27,7 @@
           }'
 ---
 #校验性别参数的验证
-"url": "http://localhost:5000/login"
+"url": "http://localhost:5000/login.yaml"
 "body": '{
          	"username":"wuya",
          	"password":"admin",
@@ -41,7 +41,7 @@ expect: '{
          }'
 ---
 #校验年龄是否是正整数
-"url": "http://localhost:5000/login"
+"url": "http://localhost:5000/login.yaml"
 "body": '{
          	"username":"wuya",
          	"password":"admin",
@@ -55,7 +55,7 @@ expect: '{
            }'
 ---
 #登录成功
-"url": "http://localhost:5000/login"
+"url": "http://localhost:5000/login.yaml"
 "body": '{
          	"username":"wuya",
          	"password":"admin",

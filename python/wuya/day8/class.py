@@ -304,7 +304,7 @@ f2=F1()
 #     def reginer(self):
 #         temp=self.username+"|"+self.password
 #         json.dump(temp,open("aa","w"))
-#     def login(self):
+#     def login.yaml(self):
 #         f=json.load(open('aa','r'))
 #
 #         f=f.split("|")
@@ -317,7 +317,7 @@ f2=F1()
 #         f=json.load(open('aa','r'))
 #         f=f.split("|")
 #
-#         r=self.login()
+#         r=self.login.yaml()
 #         if r:
 #             print('恭喜你{}登录成功'.format(f[0]))
 #

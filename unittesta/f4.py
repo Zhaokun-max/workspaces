@@ -10,7 +10,7 @@ class F2(unittest.TestCase):
 
     def setUp(self):
 
-        self.drive=webdriver.Firefox()
+        self.drive=webdriver.Chrome()
         self.drive.maximize_window()
         self.drive.implicitly_wait(30)
         self.drive.get('https://www.baidu.com/')

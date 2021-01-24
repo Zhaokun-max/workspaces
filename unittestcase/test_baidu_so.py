@@ -3,7 +3,7 @@ import unittest
 # 当浏览器无法获取当前页面网址，需要切换句柄实现，当前页面断言
 class BaiDulink(unittest.TestCase):
     def setUp(self):
-        self.drive=webdriver.Firefox()
+        self.drive=webdriver.Chrome()
         self.drive.get('https://www.baidu.com')
         #global h
         #h=self.drive.current_window_handle

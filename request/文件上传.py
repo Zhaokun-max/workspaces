@@ -29,9 +29,6 @@ def profile():
 def upload():
     url='http://upload.renren.com/upload.fcgi?pagetype=nphoto&hostid=877521005&uploadid=1609943209084'
     data={'requestToken':'772812890','_rtk':'f9d12eb4'}
-    files={'file':('login.jpg',open(r'C:\Users\Administrator\Desktop\20a259868d31ebaa482a6dd4da46652.png','rb'),'image/jpeg',{})}
+    files={'file':('login.yaml.jpg',open(r'C:\Users\Administrator\Desktop\20a259868d31ebaa482a6dd4da46652.png','rb'),'image/jpeg',{})}
     headers={'Content-Type':'multipart/form-data'}
     r=login().post(url=url,data=data,files=files,headers=headers)
-
-upload()
-
