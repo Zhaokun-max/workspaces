@@ -20,6 +20,7 @@ class Project_Name():
             return '情人大地'
         if i ==8:
             return '在那些苍翠的路上'
+    @property
     def str_Name(self):
         ran = random.randrange(1, 1000)
         Name=self.a()+str(ran)

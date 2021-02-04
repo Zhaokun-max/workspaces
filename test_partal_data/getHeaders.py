@@ -13,6 +13,7 @@ class Get_headers():
         }
         return headers
     #第三步使用
+    @property
     def getheaders_002(self):
         cookies={'Cookie': 'test.rongxin.chanquan.portal.jilin.sid=s%3Atest.rongxin.chanquan.portal.jilin.sid%3ASKPIQZaa3Ly9qOrarHNpU9yUy658RM9U.NYALLk87ohTco%2Bf5XWKAfkuHv36HjTqo6Qeahrc7Qck'}
         return cookies
