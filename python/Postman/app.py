@@ -58,7 +58,7 @@ jwt = JWT(app, authenticate, identity)
 
 class Books(Resource):
     #decorators = [auth.login_required]
-    #decorators=[jwt_required()]
+    decorators=[jwt_required()]
 
     def get(self):
         return jsonify({'status':0,'msg':'ok','datas':books})
@@ -78,7 +78,7 @@ class Books(Resource):
 
 class Book(Resource):
     #decorators = [auth.login_required]
-    #decorators = [jwt_required()]
+    decorators = [jwt_required()]
 
     def get(self,book_id):
         book = list(filter(lambda t: t['id'] == book_id, books))
